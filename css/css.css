@@ -1,0 +1,84 @@
+main {
+  min-height: 2000px;
+  background-color: rgb(218, 194, 182);
+}
+header {
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 99;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(218, 194, 182, 0.35);
+}
+header.sticky {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.9);
+  animation: 0.5s ease-in-out 0s normal none 1 running fadeInDown;
+}
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+.logo {
+  max-width: 180px;
+  transition: all 0.3s;
+}
+.sticky .logo {
+  max-width: 120px;
+}
+.home-hero {
+  background-color: #201f1a;
+  background-image: url(../images/coffee-cup2.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+footer {
+  background-color: #201f1a;
+  background-image: url(../images/blurred-coffee-beans.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 300px;
+  border-top: 1px solid rgba(218, 194, 182, 0.35);
+  display: flex;
+  
+}
+footer > .container-fluid {
+  background: rgb(0, 0, 0);
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.66) 0%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  border-top: 8px solid black;
+}
