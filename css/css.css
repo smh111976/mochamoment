@@ -1,3 +1,6 @@
+a {
+  transition: all 0.3s;
+}
 main {
   min-height: 2000px;
   background-color: rgb(218, 194, 182);
@@ -6,15 +9,36 @@ header {
   top: 0px;
   left: 0px;
   right: 0px;
+  height: 120px;
   z-index: 99;
   position: absolute;
+  display: flex;
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
   border-bottom: 1px solid rgba(218, 194, 182, 0.35);
+  transition: all 0.3s;
 }
 header.sticky {
   position: fixed;
+  height: 80px;
   background-color: rgba(0, 0, 0, 0.9);
   animation: 0.5s ease-in-out 0s normal none 1 running fadeInDown;
+}
+
+header.sticky .navbar-collapse {
+  top: 80px;
+}
+header .shopping-cart {
+  color: rgb(0, 0, 0, 0.75);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+header .shopping-cart i {
+  margin-right: 0.3rem;
+}
+header a.btn.order-online {
+  background-color: rgb(218, 194, 182);
 }
 @-webkit-keyframes fadeInDown {
   0% {
@@ -47,11 +71,11 @@ header.sticky {
   animation-name: fadeInDown;
 }
 .logo {
-  max-width: 180px;
+  width: 180px;
   transition: all 0.3s;
 }
 .sticky .logo {
-  max-width: 120px;
+  width: 120px;
 }
 .home-hero {
   background-color: #201f1a;
@@ -61,18 +85,16 @@ header.sticky {
   background-size: cover;
   min-height: 100vh;
 }
-footer {
+.footer {
   background-color: #201f1a;
   background-image: url(../images/blurred-coffee-beans.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 300px;
   border-top: 1px solid rgba(218, 194, 182, 0.35);
   display: flex;
-  
 }
-footer > .container-fluid {
+.footer > .container-fluid {
   background: rgb(0, 0, 0);
   background: rgb(0, 0, 0);
   background: linear-gradient(
@@ -81,4 +103,65 @@ footer > .container-fluid {
     rgba(0, 0, 0, 0.85) 100%
   );
   border-top: 8px solid black;
+}
+.footer blockquote p {
+  font-weight: bold;
+  color: rgb(218, 194, 182);
+  text-align: center;
+}
+.footer blockquote footer {
+  font-size: 0.8rem;
+}
+.footer .nav-link {
+  color: rgba(255, 255, 255, 0.5);
+}
+.footer .nav-link:hover {
+  color: white;
+}
+.footer .social-icons {
+  display: flex;
+  align-items: center;
+}
+.footer .social-icons a {
+  font-size: 2rem;
+}
+.footer .nav-item {
+  display: flex;
+}
+.footer .nav-item a {
+  align-self: center;
+}
+.social-icons .facebook {
+  color: #4267b2;
+}
+.social-icons .twitter {
+  color: #1da1f2;
+}
+.copyright {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+}
+@media (max-width: 991px) {
+  header .navbar-collapse {
+    position: fixed;
+    top: 120px;
+    right: 0;
+    left: 0;
+    background-color: white;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+  }
+  header .navbar-nav {
+    padding: 2rem;
+  }
+  header .navbar-dark .navbar-nav .nav-item .nav-link {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  header .navbar-dark .navbar-nav .nav-item.active .nav-link {
+    color: black;
+  }
+}
+@media (min-width: 992px) {
+  header .shopping-cart {
+    color: rgb(255, 255, 255, 0.5);
+  }
 }
