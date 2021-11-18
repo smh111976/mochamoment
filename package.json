@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin",
+    "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run copyfavicon && npm run usemin",
     "clean": "rimraf dist",
     "copyfonts": "copyfiles -f node_modules/@fortawesome/fontawesome-free/webfonts/* dist/webfonts",
+    "copyfavicon": "copyfiles favicon-32x32.png dist/",
     "imagemin": "imagemin images/* -o dist/images",
     "lite": "lite-server",
     "scss": "node-sass -o css/ css/",
