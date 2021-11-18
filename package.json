@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin",
     "clean": "rimraf dist",
-    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "copyfonts": "copyfiles -f node_modules/@fortawesome/fontawesome-free/webfonts/* dist/webfonts",
     "imagemin": "imagemin images/* -o dist/images",
     "lite": "lite-server",
     "scss": "node-sass -o css/ css/",
