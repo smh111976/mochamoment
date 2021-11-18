@@ -5,6 +5,11 @@ $trans-black: rgba(0, 0, 0, 0.5);
 $trans-cream: rgba(218, 194, 182, 0.35);
 $facebook-blue: #4267b2;
 $twitter-blue: #1da1f2;
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 a {
   transition: all 0.3s;
 }
@@ -12,8 +17,11 @@ h1 {
   font-family: 'Tangerine', cursive;
 }
 main {
-  min-height: 2000px;
   background-color: $cream;
+  flex: 1 1 auto;
+  .home & {
+    display: flex;
+  }
 }
 header {
   top: 0px;
@@ -55,6 +63,9 @@ header {
   a {
     &.btn.order-online {
       background-color: $cream;
+      &:hover {
+        background-color: lighten($cream, 10%);
+      }
     }
   }
 }
@@ -68,13 +79,43 @@ header {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  padding-bottom: 3rem;
+  flex-basis: 100%;
+  // min-height: 100vh;
+  & > .container {
+    padding-top: 164px;
+  }
   &-text {
-    padding-top: 200px;
-    color: white;
-    background-color: rgba(black, 0.5);
-    max-width: 50%;
+    padding: 2rem;
+    background: linear-gradient(
+      0deg,
+      rgba($black, 0.8) 0%,
+      rgba($black, 0.95) 100%
+    );
     margin: 0 auto;
+    border-radius: 0.5rem;
+    @media (min-width: 768px) {
+      padding: 3rem;
+    }
+    @media (min-width: 992px) {
+      max-width: 70%;
+      margin: 0 auto 0 0;
+    }
+  }
+  h1 {
+    font-size: 4.8rem;
+    text-shadow: 2px 2px 4px #000000;
+    color: $white;
+    line-height: 5rem;
+    margin-bottom: 1.65rem;
+    @media (min-width: 768px) {
+      font-size: 6rem;
+    }
+  }
+  p {
+    text-shadow: 2px 2px 4px #000000;
+    line-height: 2.25rem;
+    color: $cream;
   }
 }
 .footer {
@@ -83,7 +124,6 @@ header {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-top: 1px solid $trans-cream;
   display: flex;
   & > .container-fluid {
     background: linear-gradient(
@@ -91,7 +131,7 @@ header {
       rgba($black, 0.66) 0%,
       rgba($black, 0.85) 100%
     );
-    border-top: 8px solid $black;
+    border-top: 1px solid $black;
   }
   blockquote {
     p {
@@ -143,7 +183,8 @@ header {
     box-shadow: 0px 5px 15px 0px rgba($black, 0.15);
   }
   header .navbar-nav {
-    padding: 2rem;
+    padding: 2rem 2rem 1rem;
+    border-bottom: 1px solid rgba($black, 0.075);
   }
   header .navbar-dark .navbar-nav .nav-item .nav-link {
     color: $trans-black;
