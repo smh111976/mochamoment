@@ -6,9 +6,6 @@ body {
 a {
   transition: all 0.3s; }
 
-h1 {
-  font-family: 'Tangerine', cursive; }
-
 main {
   background-color: #dac2b6;
   flex: 1 1 auto; }
@@ -70,6 +67,15 @@ header {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.95) 100%);
     margin: 0 auto;
     border-radius: 0.5rem; }
+    .home-hero-text::before {
+      content: '\f7b6';
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 2rem;
+      bottom: 1.5rem;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      line-height: 2rem; }
     @media (min-width: 768px) {
       .home-hero-text {
         padding: 3rem; } }
@@ -77,6 +83,13 @@ header {
       .home-hero-text {
         max-width: 70%;
         margin: 0 auto 0 0; } }
+    @media (min-width: 1200px) {
+      .home-hero-text {
+        max-width: 60%; } }
+    .home-hero-text p {
+      text-shadow: 2px 2px 4px #000000;
+      line-height: 2.25rem;
+      color: #dac2b6; }
   .home-hero h1 {
     font-size: 4.8rem;
     text-shadow: 2px 2px 4px #000000;
@@ -86,10 +99,6 @@ header {
     @media (min-width: 768px) {
       .home-hero h1 {
         font-size: 6rem; } }
-  .home-hero p {
-    text-shadow: 2px 2px 4px #000000;
-    line-height: 2.25rem;
-    color: #dac2b6; }
 
 .footer {
   background-color: black;
@@ -129,6 +138,68 @@ header {
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.8rem; }
 
+.script {
+  font-family: 'Tangerine', cursive; }
+
+.hours-location-list {
+  display: flex;
+  flex-wrap: wrap; }
+  .hours-location-list dt {
+    flex-basis: auto;
+    margin-right: 0.5rem;
+    line-height: 1.5rem; }
+  .hours-location-list dd {
+    flex-basis: 50%;
+    margin: 0;
+    line-height: 1.5rem; }
+
+[class*='home-section--'] {
+  padding: 2rem;
+  border-radius: 0.5rem; }
+
+.home-section--hours::before {
+  content: '\f017';
+  right: 1rem;
+  top: 1rem;
+  font-size: 2rem;
+  line-height: 2rem;
+  opacity: 0.9; }
+
+.home-section--email::before {
+  content: '\f658';
+  right: 1rem;
+  top: 1rem;
+  font-size: 2rem;
+  line-height: 2rem;
+  opacity: 0.9; }
+
+.home-section--email a {
+  font-weight: bold;
+  color: white; }
+
+.home-section--location::before {
+  content: '\f5a0';
+  right: 1rem;
+  top: 1rem;
+  font-size: 2rem;
+  line-height: 2rem;
+  opacity: 0.9;
+  color: white; }
+
+.home-section--location a {
+  font-weight: bold;
+  color: white; }
+
+.semi-trans-bg-white {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.95) 100%); }
+
+.semi-trans-bg-black {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.95) 100%);
+  color: #dac2b6; }
+
+.semi-trans-bg-cream {
+  background: linear-gradient(0deg, rgba(218, 194, 182, 0.8) 0%, rgba(218, 194, 182, 0.95) 100%); }
+
 @media (max-width: 991px) {
   header .navbar-collapse {
     position: fixed;
@@ -144,6 +215,16 @@ header {
     color: rgba(0, 0, 0, 0.5); }
   header .navbar-dark .navbar-nav .nav-item.active .nav-link {
     color: black; } }
+
+.before-bg-icon {
+  position: relative; }
+  .before-bg-icon::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute; }
+  .before-bg-icon h2,
+  .before-bg-icon p {
+    position: relative; }
 
 @media (min-width: 992px) {
   header .shopping-cart {

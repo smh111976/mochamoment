@@ -13,9 +13,7 @@ body {
 a {
   transition: all 0.3s;
 }
-h1 {
-  font-family: 'Tangerine', cursive;
-}
+
 main {
   background-color: $cream;
   flex: 1 1 auto;
@@ -86,6 +84,17 @@ header {
     padding-top: 164px;
   }
   &-text {
+    &::before {
+      content: '\f7b6';
+      color: rgba($white, 0.8);
+      font-size: 2rem;
+      bottom: 1.5rem;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      line-height: 2rem;
+    }
+
     padding: 2rem;
     background: linear-gradient(
       0deg,
@@ -101,6 +110,14 @@ header {
       max-width: 70%;
       margin: 0 auto 0 0;
     }
+    @media (min-width: 1200px) {
+      max-width: 60%;
+    }
+    p {
+      text-shadow: 2px 2px 4px #000000;
+      line-height: 2.25rem;
+      color: $cream;
+    }
   }
   h1 {
     font-size: 4.8rem;
@@ -111,11 +128,6 @@ header {
     @media (min-width: 768px) {
       font-size: 6rem;
     }
-  }
-  p {
-    text-shadow: 2px 2px 4px #000000;
-    line-height: 2.25rem;
-    color: $cream;
   }
 }
 .footer {
@@ -173,6 +185,97 @@ header {
   color: rgba($white, 0.5);
   font-size: 0.8rem;
 }
+.script {
+  font-family: 'Tangerine', cursive;
+}
+.hours-location-list {
+  display: flex;
+  flex-wrap: wrap;
+  dt {
+    flex-basis: auto;
+    margin-right: 0.5rem;
+    line-height: 1.5rem;
+  }
+  dd {
+    flex-basis: 50%;
+    margin: 0;
+    line-height: 1.5rem;
+  }
+}
+[class*='home-section--'] {
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+.home-section--hours {
+  &::before {
+    content: '\f017';
+    right: 1rem;
+    top: 1rem;
+    font-size: 2rem;
+    line-height: 2rem;
+    opacity: 0.9;
+    // bottom: 1rem;
+    // left: 50%;
+    // transform: translate(-50%, 0);
+  }
+}
+.home-section--email {
+  &::before {
+    content: '\f658';
+    right: 1rem;
+    top: 1rem;
+    font-size: 2rem;
+    line-height: 2rem;
+    opacity: 0.9;
+    // bottom: 1rem;
+    // left: 50%;
+    // transform: translate(-50%, 0);
+  }
+  a {
+    font-weight: bold;
+    color: white;
+  }
+}
+.home-section--location {
+  &::before {
+    content: '\f5a0';
+    right: 1rem;
+    top: 1rem;
+    font-size: 2rem;
+    line-height: 2rem;
+    opacity: 0.9;
+    color: white;
+    // bottom: 1rem;
+    // left: 50%;
+    // transform: translate(-50%, 0);
+  }
+  a {
+    font-weight: bold;
+    color: white;
+  }
+}
+.semi-trans-bg-white {
+  background: linear-gradient(
+    0deg,
+    rgba($white, 0.8) 0%,
+    rgba($white, 0.95) 100%
+  );
+}
+.semi-trans-bg-black {
+  background: linear-gradient(
+    0deg,
+    rgba($black, 0.8) 0%,
+    rgba($black, 0.95) 100%
+  );
+  color: $cream;
+}
+.semi-trans-bg-cream {
+  background: linear-gradient(
+    0deg,
+    rgba($cream, 0.8) 0%,
+    rgba($cream, 0.95) 100%
+  );
+}
 @media (max-width: 991px) {
   header .navbar-collapse {
     position: fixed;
@@ -191,6 +294,19 @@ header {
   }
   header .navbar-dark .navbar-nav .nav-item.active .nav-link {
     color: $black;
+  }
+}
+.before-bg-icon {
+  position: relative;
+  &::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+  }
+
+  h2,
+  p {
+    position: relative;
   }
 }
 @media (min-width: 992px) {
