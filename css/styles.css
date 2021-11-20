@@ -130,6 +130,8 @@ header {
     display: flex; }
     .footer .nav-item a {
       align-self: center; }
+  .footer .quote {
+    font-size: 2.5rem; }
 
 .copyright {
   color: rgba(255, 255, 255, 0.5);
