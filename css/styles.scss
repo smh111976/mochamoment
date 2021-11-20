@@ -205,31 +205,33 @@ header {
 [class*='home-section--'] {
   padding: 2rem;
   border-radius: 0.5rem;
+  position: relative;
+  a {
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+    }
+  }
 }
 .home-section--hours {
   &::before {
     content: '\f017';
-    right: 1rem;
+    right: 2rem;
     top: 1rem;
     font-size: 2rem;
     line-height: 2rem;
     opacity: 0.9;
-    // bottom: 1rem;
-    // left: 50%;
-    // transform: translate(-50%, 0);
   }
 }
 .home-section--email {
   &::before {
     content: '\f658';
-    right: 1rem;
+    right: 2rem;
     top: 1rem;
     font-size: 2rem;
     line-height: 2rem;
     opacity: 0.9;
-    // bottom: 1rem;
-    // left: 50%;
-    // transform: translate(-50%, 0);
   }
   a {
     font-weight: bold;
@@ -239,15 +241,12 @@ header {
 .home-section--location {
   &::before {
     content: '\f5a0';
-    right: 1rem;
+    right: 2rem;
     top: 1rem;
     font-size: 2rem;
     line-height: 2rem;
     opacity: 0.9;
     color: white;
-    // bottom: 1rem;
-    // left: 50%;
-    // transform: translate(-50%, 0);
   }
   a {
     font-weight: bold;
@@ -276,26 +275,6 @@ header {
     rgba($cream, 0.95) 100%
   );
 }
-@media (max-width: 991px) {
-  header .navbar-collapse {
-    position: fixed;
-    top: 120px;
-    right: 0;
-    left: 0;
-    background-color: $white;
-    box-shadow: 0px 5px 15px 0px rgba($black, 0.15);
-  }
-  header .navbar-nav {
-    padding: 2rem 2rem 1rem;
-    border-bottom: 1px solid rgba($black, 0.075);
-  }
-  header .navbar-dark .navbar-nav .nav-item .nav-link {
-    color: $trans-black;
-  }
-  header .navbar-dark .navbar-nav .nav-item.active .nav-link {
-    color: $black;
-  }
-}
 .before-bg-icon {
   position: relative;
   &::before {
@@ -304,11 +283,35 @@ header {
     position: absolute;
   }
 
-  h2,
-  p {
+  h2 {
     position: relative;
   }
 }
+@media (max-width: 991px) {
+  header {
+    nav.navbar {
+      ul.navbar-nav {
+        padding: 2rem;
+        .nav-item {
+          a.nav-link {
+            color: $black;
+            font-size: 1.5rem;
+          }
+        }
+        border-bottom: 1px solid rgba($black, 0.125);
+      }
+    }
+    .navbar-collapse {
+      position: fixed;
+      top: 120px;
+      right: 0;
+      left: 0;
+      background-color: $white;
+      box-shadow: 0px 5px 15px 0px rgba($black, 0.15);
+    }
+  }
+}
+
 @media (min-width: 992px) {
   header .shopping-cart {
     color: rgba($white, 0.5);
