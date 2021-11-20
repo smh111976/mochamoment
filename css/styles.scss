@@ -120,14 +120,11 @@ header {
     }
   }
   h1 {
-    font-size: 4.8rem;
+    font-size: 6rem;
     text-shadow: 2px 2px 4px #000000;
     color: $white;
     line-height: 5rem;
     margin-bottom: 1.65rem;
-    @media (min-width: 768px) {
-      font-size: 6rem;
-    }
   }
 }
 .footer {
@@ -206,6 +203,9 @@ header {
   padding: 2rem;
   border-radius: 0.5rem;
   position: relative;
+  h2 {
+    font-size: 4rem;
+  }
   a {
     &::after {
       content: '';
