@@ -15,10 +15,21 @@ a {
 }
 
 main {
-  background-color: $cream;
+  background-color: $black;
   flex: 1 1 auto;
   .home & {
     display: flex;
+  }
+
+  & > .container-fluid {
+    margin: 152px 0 2rem;
+    display: flex;
+    & > .container.content {
+      background-color: $white;
+      border-radius: 0.25rem;
+      max-width: 960px;
+      padding: 2rem 3rem;
+    }
   }
 }
 header {
@@ -181,6 +192,7 @@ header {
     font-size: 2.5rem;
   }
 }
+
 .copyright {
   color: rgba($white, 0.5);
   font-size: 0.8rem;

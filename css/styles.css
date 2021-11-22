@@ -7,10 +7,18 @@ a {
   transition: all 0.3s; }
 
 main {
-  background-color: #dac2b6;
+  background-color: black;
   flex: 1 1 auto; }
   .home main {
     display: flex; }
+  main > .container-fluid {
+    margin: 152px 0 2rem;
+    display: flex; }
+    main > .container-fluid > .container.content {
+      background-color: white;
+      border-radius: 0.25rem;
+      max-width: 960px;
+      padding: 2rem 3rem; }
 
 header {
   top: 0px;
