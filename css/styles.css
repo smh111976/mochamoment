@@ -105,6 +105,31 @@ header {
     line-height: 5rem;
     margin-bottom: 1.65rem; }
 
+.container--menu .card {
+  margin-bottom: 1rem; }
+  .container--menu .card-title {
+    font-weight: bold; }
+  .container--menu .card-text:not(:last-child) {
+    font-size: 0.8rem;
+    margin-bottom: 1rem; }
+
+.container--menu h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  margin-bottom: 1rem; }
+
+.container--menu .category-wrap {
+  margin-bottom: 2rem; }
+  .container--menu .category-wrap > div {
+    display: flex; }
+
+.container > h1 {
+  text-align: center;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 0.25rem;
+  margin-bottom: 3rem; }
+
 .footer {
   background-color: black;
   background-image: url(../images/blurred-coffee-beans.jpg);
